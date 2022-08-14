@@ -1,11 +1,12 @@
-# Surfs Up!
+# Surfs-Up Weather Analysis
 
 ## Purpose
 
 ### Investing in a North Shore Dream
-
-   ![NorthShoreGraphic](https://github.com/rloufoster/surfs_up/blob/main/Resources/NorthShoreGraphic_Resized.png?raw=true)      
-
+<p align="center">
+    <img width="500" height="300" src= "https://github.com/rloufoster/surfs_up/blob/main/Resources/NorthShoreGraphic_Resized.png?raw=true">
+</p>    
+   
 The purpose of this analysis is to explore weather data stored in a SQLite database in order to inform a potential investor on weather patterns on Oahu, Hawaii.  While visiting Oahu's North Shore last year, I had the idea to create a business that would allow me to live out my dream of owning a surfboard and milkshakes operation on Oahu. I have some savings but will need additional investors to get the business off the ground. I put together a strong business plan and reached out to a successful surfing entrepreneur, W. Avy. Mr Avy is very impressed with my proposal and initial analyses, but wants more information about temperature trends. Specifically, he wants temperature data for the months of June and December on Oahu, in order to determine if the surf and shakes business is sustainable year-round. W Avy has asked that I submit these additional insights before coming "onboard"- no pun intenteded.
 
 
@@ -58,7 +59,7 @@ In order to explore the data stored in SQLite , SQLAlchemy was used to connect a
 ## Results
 
 
-* When we pulled the data, we first looked at the the precipitation for a one year timeframe. We reviewed the activity from August 23, 2016 -   August 23, 2017. The average was 18% based on 2,021 observations. This tells us that throughout the year, Oahu was mostly sunny throughout     the day and experienced low rainfall.
+* Precipitation insights were captured by looking at precipitation data collected by the weather stations from August 23, 2016 - August 23, 2017. Average precipitation for June is 14% and December is 22%.   
  
    
    ![Precip_Graph](https://github.com/rloufoster/surfs_up/blob/main/Resources/Precipitation_1yr_graph.png?raw=true)
@@ -68,7 +69,7 @@ In order to explore the data stored in SQLite , SQLAlchemy was used to connect a
    
    
 
-* We also looked at the number of weather stations that were actively collecting precipitation data and focus on one station that had the most   observations recorded. In total, there were (9) stations with USC00519281 showing the highest amount of observations at 2,772 entries. We     used the information from this station to review the temperature for the same time period. The results showed that the average temperature     throughout the year was 72°F with a low of 54°F and a high of 85°F.
+* I also looked at the number of weather stations that were collecting precipitation data.  There were 9 stations with USCOO519281 showing the highest amount of reported observations with 2,772. I used the information from this station to review the temperature for the same time period. The results showed that the average temperature throughout the year was 72°F with a low of 54°F and a high of 85°F.
 
 
   ![Weather_Stations](https://github.com/rloufoster/surfs_up/blob/main/Resources/weather_stations_graph.png?raw=true)
@@ -93,5 +94,9 @@ In order to explore the data stored in SQLite , SQLAlchemy was used to connect a
 
 ## Summary
 
-In summary, the temperature in Oahu is relatively the same throughout the year and the chances of continuous rainfall is low. When we rewrite the queries to add precipitation to the results for June and December, the average precipitation in those months showed:
+To recap, even though temperatures recorded in December vary slightly more than those in June, December would still provide optimal weather conditions for both surfing and ice cream.  The average temperatures in June and December only differ by 4 degrees.
+
+I would like to review other important variables that are correlated with optimal beach and surfing weather. Sunch varibles include precipitation, wave swells and wind condition. Though there may be some contrasting optimal conditions based on surfing vs sunbathing, it is important to identify those conditions and see how they correlate to foot traffic to the beach (depending on the time of year). It would be foolish to only value temperatures as the key indicator for opening a business.
+
+
 
