@@ -1,80 +1,95 @@
-# surfs_up
-Using SQLite, SQLAlchemy, Flask and Python in Jupyter Notebook to analyze climate data to guide in a surf shop investment decision making
+# Surfs Up!
 
 ## Purpose
 
 ### Investing in a North Shore Dream
 
- ![NorthShoreGraphic](https://github.com/rloufoster/surfs_up/blob/main/Resources/NorthShoreGraphic_Resized.png?raw=true)      
+   ![NorthShoreGraphic](https://github.com/rloufoster/surfs_up/blob/main/Resources/NorthShoreGraphic_Resized.png?raw=true)      
 
-While visiting Oahu last year,  I had the idea to create a business that would allow me to live out my dream of living, and surging on Oahu permantently. A shop that would serve surfboards and ice cream to tourists.  I had some savings, but would need additional investors to get business off the ground.  I have put together a strong business plan and reached out to a successful surfing entrepreneur who is famous for his love of surfing, W. Avy. Mr Avy likes your business plan and initial analysis, but he wants more information about temperature trends before opening the surf shop. Specifically, he wants temperature data for the months of June and December in Oahu, in order to determine if the surf and ice cream shop business is sustainable year-round. W Avy, therefore has asked that, along with my business plan, I put together a weather analysis of Oahu before he will agree to come "onboard"- no pun intenteded.
-
+The purpose of this analysis is to explore weather data stored in a SQLite database in order to inform a potential investor on weather patterns on Oahu, Hawaii.  While visiting Oahu's North Shore last year, I had the idea to create a business that would allow me to live out my dream of owning a surfboard and milkshakes operation on Oahu. I have some savings but will need additional investors to get the business off the ground. I have put together a strong business plan and reached out to a successful surfing entrepreneur, W. Avy. Mr Avy is very impressed with my proposal and initial analyses, but he wants more information about temperature trends before investing in the venture. Specifically, he wants temperature data for the months of June and December on Oahu, in order to determine if the surf and shakes business is sustainable year-round. W Avy, has therefore asked, that along with my business plan, I put together a weather analysis of Oahu before he will agree to come "onboard"- no pun intenteded.
 
 
 ## Method
 
-This new assignment consists of two technical analysis deliverables and a written report. You will submit the following:
+In order to explore the data in SQLite , SQLAlchemy was used to connect and generate queries in order to capture the necessary data for the analysis. Throughout this exploration process, both Jupyter Notebook and VS Code were used to import dependencies and write code.  Two specific descriptive analyses were requested:
 
-#### Resources:
+ * 1.) Determine the Summary Statistics for June weather patterns based on the hawaii.sqlite database 
+ * 2.) Determine the Summary Statistics for December weather patterns based on the hawaii.sqlite database
+
+
+### Resources:
 
 * **Data File:** hawaii.sqlite
 * **Programming Files:** Surfsup_Challenge.ipynb which includes an earlier analysis, climate_analysis.ipynb
 * **Data Tools:** Matplotli 3.2.2, Python 3.9, Visual Studio Code 1.50.0, Anaconda 4.8.5, Jupyter Notebook 6.1.4, Pandas, Numpy, Sqlalchemy,       Flask 
 
--Deliverable 1 Code 
+### The following are the steps taken to capture the June Analysis: 
 
-Query Code for June
-![June_Query_Del1](https://github.com/rloufoster/surfs_up/blob/main/Resources/June_Query_Del1.png?raw=true)
+   **Write a query to retrieve June temps**
+   
+   ![June_Query_Del1](https://github.com/rloufoster/surfs_up/blob/main/Resources/June_Query_Del1.png?raw=true)
 
-Temps List Code for June
-![June_TempsList_Del1](https://github.com/rloufoster/surfs_up/blob/main/Resources/June_TempsList_Del1.png?raw=true)
+   **Convert June temps to list**
+   
+   ![June_TempsList_Del1](https://github.com/rloufoster/surfs_up/blob/main/Resources/June_TempsList_Del1.png?raw=true)
 
-List to DF code for June
-![June_LSTODF_Del1](https://github.com/rloufoster/surfs_up/blob/main/Resources/June_LSTODF_Del1.png?raw=true)
+   **Create DataFrame from the list of temps for the month of June**
+   
+   ![June_LSTODF_Del1](https://github.com/rloufoster/surfs_up/blob/main/Resources/June_LSTODF_Del1.png?raw=true)
 
-June Dataframe
-![June_Dataframe](https://github.com/rloufoster/surfs_up/blob/main/Resources/June_Dataframe_Del1.png?raw=true)
+   
 
--Deliverable 2 Code 
+### The following are the steps taken to capture the December Analysis:
 
-Query Code for December
-![Dec_Query_Del2](https://github.com/rloufoster/surfs_up/blob/main/Resources/Dec_Query_Del2.png?raw=true)
+   **Write a query to retrieve December temps**
+   
+   ![Dec_Query_Del2](https://github.com/rloufoster/surfs_up/blob/main/Resources/Dec_Query_Del2.png?raw=true)
 
-Temps List Code for June
-![Dec_TempsList_Del2](https://github.com/rloufoster/surfs_up/blob/main/Resources/Dec_TempsList_Del2.png?raw=true)
+   **Convert December temps to list**
+   
+   ![Dec_TempsList_Del2](https://github.com/rloufoster/surfs_up/blob/main/Resources/Dec_TempsList_Del2.png?raw=true)
 
-List to DF code for Dec
-![Dec_LSTODF_Del2](https://github.com/rloufoster/surfs_up/blob/main/Resources/Dec_LSTODF_Del2.png?raw=true)
+   **Create DataFrame from the list of temps for the month of June**
+   
+   ![Dec_LSTODF_Del2](https://github.com/rloufoster/surfs_up/blob/main/Resources/Dec_LSTODF_Del2.png?raw=true)
 
-Dec Dataframe
-![Dec_Dataframe](https://github.com/rloufoster/surfs_up/blob/main/Resources/Dec_Dataframe_Del2.png?raw=true)
-
+   
 
 ## Results
 
-Key Differences in Weather: Oahu, Hawaii
 
-Descriptive Stats:
+* When we pulled the data, we first looked at the the precipitation for a one year timeframe. We reviewed the activity from August 23, 2016 -   August 23, 2017. The average was 18% based on 2,021 observations. This tells us that throughout the year, Oahu was mostly sunny throughout     the day and experienced low rainfall.
 
-June
+
+   ![Precip_Stats]()                                  ![Precip_Graph]()
+
+
+
+
+* We also looked at the number of weather stations that were actively collecting precipitation data and focus on one station that had the most   observations recorded. In total, there were (9) stations with USC00519281 showing the highest amount of observations at 2,772 entries. We     used the information from this station to review the temperature for the same time period. The results showed that the average temperature     throughout the year was 72°F with a low of 54°F and a high of 85°F.
+
+  ![Weather_Stations]()
+  
+
+* Temperature Descriptive Stats:
+
+**June Temps**
+
 ![June_DescriptiveStats](https://github.com/rloufoster/surfs_up/blob/main/Resources/June_DescriptiveStats_Del1.png?raw=true)
 
-December
+**December Temps**
+
 ![Dec_DescriptiveStats](https://github.com/rloufoster/surfs_up/blob/main/Resources/Dec_DescriptiveStats_Del2.png?raw=true)
 
 
-* The average recorded temperature in June is about 75 degrees F, 4 degrees higher than the average temp in December.
-  * This represents a -5% change in average temperature from June to December
-  
-* The frequency of temperatures recorded in June tends to have a much more normal, tight bell curve distribution, cooroborated by the smaller   std measure of June temps vs December temps
+* The average recorded temperature in June is approximately 75 degrees F, 4 degrees higher than the average temp in December.
+    
+* Both June and December showed similar max temperatures, however December min temp was 8 degrees lower than June.
 
-* The December temperatures seem to be more variable than those in June given its larger range in recorded temperatures (comparing the max vs   min temp of each month)
-
-  * However, when looking at the plotted distribution of Dec Temps, we can see that the median temperature in Dec is more inline with the         average, and there are not many outliers skuing the average temperature higher or lower than the actual recorded frequency.
-
+* The December temperatures are only slightly more variable than those in June. 
 
 
 ## Summary
 
-Summarize the results and include two additional queries to perform to gather more weather data for June and Dec.
+In summary, the temperature in Oahu is relatively the same throughout the year and the chances of continuous rainfall is low. When we rewrite the queries to add precipitation to the results for June and December, the average precipitation in those months showed:
 
