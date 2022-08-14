@@ -1,6 +1,6 @@
 # Surfs-Up Weather Analysis
 
-## Purpose
+## Purpose:
 
 ### Investing in a North Shore Dream
 <p align="center">
@@ -10,7 +10,7 @@
 The purpose of this analysis is to explore weather data stored in a SQLite database in order to inform a potential investor on weather patterns on Oahu, Hawaii.  While visiting Oahu's North Shore last year, I had the idea to create a business that would allow me to live out my dream of owning a surfboard and milkshakes operation on Oahu. I have some savings but will need additional investors to get the business off the ground. I put together a strong business plan and reached out to a successful surfing entrepreneur, W. Avy. Mr Avy is very impressed with my proposal and initial analyses, but wants more information about temperature trends. Specifically, he wants temperature data for the months of June and December on Oahu, in order to determine if the surf and shakes business is sustainable year-round. W Avy has asked that I submit these additional insights before coming "onboard"- no pun intenteded.
 
 
-## Method
+## Method:
 
 In order to explore the data stored in SQLite , SQLAlchemy was used to connect and generate queries in order to capture the necessary data for the analysis. Throughout this exploration process, both Jupyter Notebook and VS Code were used to import dependencies and write and run the code.  Two specific descriptive analyses were requested:
 
@@ -20,6 +20,7 @@ In order to explore the data stored in SQLite , SQLAlchemy was used to connect a
 
 ### Resources:
 
+.
 * **Data File:** hawaii.sqlite
 * **Programming Files:** Surfsup_Challenge.ipynb which includes an earlier analysis, climate_analysis.ipynb
 * **Data Tools:** Matplotli 3.2.2, Python 3.9, Visual Studio Code 1.50.0, Anaconda 4.8.5, Jupyter Notebook 6.1.4, Pandas, Numpy, Sqlalchemy,       Flask 
@@ -56,7 +57,7 @@ In order to explore the data stored in SQLite , SQLAlchemy was used to connect a
 
    
 
-## Results
+## Results:
 
 
 * Precipitation insights were captured by looking at precipitation data collected by the weather stations from August 23, 2016 - August 23, 2017. Average precipitation for June is 14% and December is 22%.   
@@ -85,18 +86,20 @@ In order to explore the data stored in SQLite , SQLAlchemy was used to connect a
 
 ![Dec_DescriptiveStats](https://github.com/rloufoster/surfs_up/blob/main/Resources/Dec_TempDescriptiveStats_Del2.png?raw=true)
 
+#### Key Differences on Weather in Oahu
+
 * The average recorded temperature in June is approximately 75 degrees F, 4 degrees higher than the average temp in December.
     
 * Both June and December showed similar max temperatures, however December min temp was 8 degrees lower than June.
 
-* The December temperatures are only slightly more variable than those in June. 
+* The December temperatures are only slightly more variable than those in June with a std of 3.74 compared to that of June at 3.25. 
 
 
 ## Summary
 
-To recap, even though temperatures recorded in December vary slightly more than those in June, December would still provide optimal weather conditions for both surfing and ice cream.  The average temperatures in June and December only differ by 4 degrees.
+Even though temperatures recorded in December are slightly more variable than in June, December would still provide optimal weather conditions for both surfing and ice cream.  The average temperatures in June and December only differ by 4 degrees. In addition, precipitation is very moderate year round, only 14% in June and 22% in December.  
 
-I would like to review other important variables that are correlated with optimal beach and surfing weather. Sunch varibles include precipitation, wave swells and wind condition. Though there may be some contrasting optimal conditions based on surfing vs sunbathing, it is important to identify those conditions and see how they correlate to foot traffic to the beach (depending on the time of year). It would be foolish to only value temperatures as the key indicator for opening a business.
+Future analyses might investigate other variables that influence optimal surfing conditions such as the wind and wave swells. It's no mystery that Oahu is know to be one of the prime surfing locations in the world, but are there specific locations on Oahu that are better than others. Also, a more thorough dive into the temperature and precipitation might reveal more variance in climate if it filtered for a longer timeframe.  Say 10 years. I would also want to include a seasonal analysis. Most variable weather patterns happen at the changes of the seasons.  Instead of capturing only June and December precipitation and temperature, I would include March and September.  
 
 
 
