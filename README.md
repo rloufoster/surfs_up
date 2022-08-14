@@ -20,7 +20,6 @@ In order to explore the data stored in SQLite , SQLAlchemy was used to connect a
 
 ### Resources:
 
-.
 * **Data File:** hawaii.sqlite
 * **Programming Files:** Surfsup_Challenge.ipynb which includes an earlier analysis, climate_analysis.ipynb
 * **Data Tools:** Matplotli 3.2.2, Python 3.9, Visual Studio Code 1.50.0, Anaconda 4.8.5, Jupyter Notebook 6.1.4, Pandas, Numpy, Sqlalchemy,       Flask 
